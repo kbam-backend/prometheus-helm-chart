@@ -1210,7 +1210,9 @@ extraManifests: []
 ##
 alertmanager:
   ## If false, alertmanager will not be installed
-  ##
+
+  ## extra args for kb-di-system
+  extraArgs: cluster.advertise-address: "[$(POD_IP)]:9093"
   enabled: true
 
   persistence:
